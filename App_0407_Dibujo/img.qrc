@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>frame_ui.png</file>
+        <file>UI_.png</file>
+    </qresource>
+</RCC>

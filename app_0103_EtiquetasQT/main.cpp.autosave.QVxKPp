@@ -1,0 +1,21 @@
+//#include <QCoreApplication>
+#include <QApplication>
+#include <QLabel>
+int main(int argc, char *argv[])
+{
+   // QCoreApplication a(argc, argv);
+    QApplication a(argc, argv);
+
+    /*
+     Estatico.
+    QLabel etiqueta("Hola Mundo uwu");
+    etiqueta.show();
+    
+    Dinamico
+    QLabel *etiqueta = new QLabel("Muy buenos días chavales.");
+    etiqueta->show();
+ */
+    
+   QLabel 
+    return a.exec();
+}

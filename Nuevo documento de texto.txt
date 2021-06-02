@@ -1,0 +1,67 @@
+#include "dialog.h"
+#include "ui_dialog.h"
+#include <QPainter>
+
+Dialog::Dialog(QWidget *parent)
+    : QDialog(parent)
+    , ui(new Ui::Dialog)
+{
+    ui->setupUi(this);
+    dibujarOrientacionNormal = dibujomapeado = false;
+
+}
+
+Dialog::~Dialog()
+{
+    delete ui;
+}
+
+void Dialog::PaintEvent(QPaintEvent *evt){
+   Q_UNUSED(evt);
+
+    canvas = new QPainter(this);
+
+    if(dibujarOrientacionNormal)
+        dibujarfigura();
+    else if(dibujomapeado)
+        dibujarfiguraMapeada();
+
+}
+
+void Dialog::asignarfigura(){
+    fig[0][0] = 10; fig[0][1] = 10; fig[0][2] = 1;
+    fig[1][0] = 30; fig[1][1] = 10; fig[1][2] = 1;
+    fig[2][0] = 10; fig[2][1] = 30; fig[2][2] = 1;
+    //regresa al origen de la figura
+    fig[3][0] = 10; fig[3][1] = 10; fig[3][2] = 1;
+
+    //respalda la figura original para resetear cuando sea necesario
+    float figAux[4][3];
+
+    for ( int r = 0;r < 4 ;r++ )
+        for ( int c = 0;c < 3 ;c++ )
+    {
+        figAux[r][c] = fig[r][c];
+    }
+
+    ancho = this->size().width() - ui->widget->size().width();
+    centrox = ancho/2;
+    centroy = this->size().height()/2;
+
+}
+void Dialog::dibujarfigura(){
+    for ( int i = 0;i<3 ;i++ ){
+        canvas->drawLine(fig[i][0],fig[i][0],fig[i+1][0],fig[i+1][1]);
+    }
+}
+void Dialog::dibujarfiguraMapeada(){
+
+}
+
+
+void Dialog::on_pushButton_clicked()
+{
+    dibujarfigura();
+    dibujarOrientacionNormal = true;
+    repaint();
+}

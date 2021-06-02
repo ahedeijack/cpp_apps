@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>686</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <underline>false</underline>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Movimiento de Etiqueta.exe</string>
+  </property>
+  <property name="windowOpacity">
+   <double>2.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>100</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ink Free</family>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 0, 0);
+border-color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img.qrc">:/img/img/snoopy.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>360</y>
+     <width>426</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btnDvd">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(255, 255, 255);
+background-color: rgb(25, 25, 25);</string>
+      </property>
+      <property name="text">
+       <string>DVD Mode</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnVertical">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(255, 255, 255);
+background-color: rgb(25, 25, 25);</string>
+      </property>
+      <property name="text">
+       <string>Vertical</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnMover">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(255, 255, 255);
+background-color: rgb(25, 25, 25);</string>
+      </property>
+      <property name="text">
+       <string>Horizontal</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnDetener">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(255, 255, 255);
+background-color: rgb(25, 25, 25);</string>
+      </property>
+      <property name="text">
+       <string>Detener</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnSalir">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(255, 255, 255);
+background-color: rgb(25, 25, 25);</string>
+      </property>
+      <property name="text">
+       <string>Salir</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Carlos A. Vázquez</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>340</y>
+     <width>271</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+font: 8pt &quot;Tw Cen MT&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>TIPOS DE MOVIMIENTOS</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>btnMover</tabstop>
+  <tabstop>btnDetener</tabstop>
+  <tabstop>btnSalir</tabstop>
+ </tabstops>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnSalir</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>449</x>
+     <y>373</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>605</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
