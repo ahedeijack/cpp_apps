@@ -1,6 +1,6 @@
 #include "dialog.h"
 #include "ui_dialog.h"
-
+//App Felix
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Dialog)
@@ -130,12 +130,11 @@ void Dialog::dibujarFiguraMapeada()
     canvas->drawLine(ancho/2,0,ancho/2,size().height());
 
 
-    canvas->drawLine(0, size().height()/2, ancho, size().height()/2);
-    canvas->drawLine(ancho/2,0,ancho/2,size().height());
 
     //Colocacion del puerto en el centro de la forma donde se esta dibujando
-    dibujo.ventana(ancho / 2, 0, ancho, size().height()/2);
-    dibujo.puerto(ancho/2, 0, ancho, size().height()/2);
+    dibujo.ventana(0,0,22,28);
+    int zoom = ui->verticalSlider->value(); //:D
+    dibujo.puerto(150-zoom,100-zoom,350+zoom,400+zoom); //:D
 
 
     //En el rectangulo el ancho y el alto
@@ -553,14 +552,4 @@ void Dialog::on_verticalSlider_sliderMoved(int position)
     asignarFigura();
     dibujoMapeado = true;
     repaint();
-}
-
-void Dialog::on_pushButton_3_clicked()
-{
-    double sX = ui->doubleSpinBox->value();
-    double sY = ui->doubleSpinBox_2->value();
-    int pfx = int(ui->doubleSpinBox_3->value());
-    int pfy = int(ui->doubleSpinBox_4->value());
-
-    escalarPuntoFijo(sX, sY, pfx, pfy);
 }

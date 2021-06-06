@@ -41,7 +41,6 @@ class Matrix
        //FigT               Fig    IDent.  TX   TY
        Matrix &traslacion(Matrix, Matrix, int, int);
        Matrix &escalacion(Matrix, Matrix, float, float);
-       Matrix &espalacionPuntoFijo(Matrix, Matrix, float, float, int, int);
 };
 
 #endif // MATRIX_H

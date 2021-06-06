@@ -222,7 +222,7 @@ Matrix &Matrix::traslacion(Matrix fig, Matrix identidad, int tX, int tY)
 
 Matrix &Matrix::escalacion(Matrix fig, Matrix identidad, float sx, float sy)
 {
-    identidad.Identidad();
+    Identidad();
     identidad.SET(0,0,sx);
     identidad.SET(1,1,sy);
 
@@ -230,19 +230,35 @@ Matrix &Matrix::escalacion(Matrix fig, Matrix identidad, float sx, float sy)
     asignar(fig);
     return *this;
 }
+Matrix &Matrix::espalacionPuntoFijo(Matrix f, Matrix id, float sx, float sy,int PFx, int PFy){
 
-Matrix &espalacionPuntoFijo(Matrix f, Matrix id, float sx, float sy, int PFx, int PFy){
     id.Identidad();
-    float escPFx = PFx * (1-sx);
-    float escPFy = PFy * (1-sy);
+    float escPFx = PFx * (1 - sx);
+    float escPFy = PFy * (1 - sy);
 
     id.SET(0,0,sx);
     id.SET(1,1,sy);
     id.SET(2,0,escPFx);
     id.SET(2,1,escPFy);
-    f *= id;
+
+    f*= id;
     asignar(f);
     return *this;
+}
+
+Matrix &Matrix::rotacion(Matrix f, Matrix r, double grad)
+{
+    float rad = grad * M_PI /180;
+
+        r.Identidad();
+        r.SET(0,0, cos(rad));
+        r.SET(0,1, sin(rad));
+        r.SET(1,0, -sin(rad));
+        r.SET(1,1, cos(rad));
+
+        f*= r;
+        this->asignar(f);
+        return *this;
 }
 
 

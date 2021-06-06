@@ -26,7 +26,6 @@ public:
 
     void trasladar(int tX, int tY);
     void escalar(float sX, float sY);
-    void escalarPuntoFijo(float sX, float sY, int pfx, int pfy);
 
 private slots:
     void on_btnIzq_clicked();
@@ -44,8 +43,6 @@ private slots:
     void on_doubleSpinBox_textChanged(const QString &arg1);
 
     void on_verticalSlider_sliderMoved(int position);
-
-    void on_pushButton_3_clicked();
 
 private:
     Ui::Dialog *ui;
