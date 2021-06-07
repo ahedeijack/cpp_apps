@@ -1,4 +1,5 @@
 #include "rectanguloitem.h"
+#include <math.h>
 
 RectanguloItem::RectanguloItem(int ancho, int alto) //QObject *parent) : QObject(parent)
 {
@@ -31,6 +32,11 @@ void RectanguloItem::keyPressEvent(QKeyEvent *evento)
     if(evento->key() == Qt::Key_S){
         timer->stop();
     }
+
+    if (evento->key() == Qt::Key_0){
+        moverAngulo();
+    }
+
 }
 
 void RectanguloItem::mover(){
@@ -69,5 +75,11 @@ void RectanguloItem::mover(){
             bandY = true;
         }
     }
+
+}
+void RectanguloItem::moverAngulo(){
+    float rad = 1 * M_PI / 180;
+
+    setPos(0, cos(rad));
 
 }

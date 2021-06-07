@@ -4,7 +4,6 @@
 #include <QObject>
 #include <QGraphicsRectItem>
 #include <QKeyEvent>
-#include <QTimer>
 
 class RectanguloItem : public QObject, public QGraphicsRectItem
 {
@@ -17,10 +16,6 @@ signals:
 
 private:
     int ancho, alto;
-    QTimer *timer;
-public slots:
-    void mover();
-    void moverAngulo();
 };
 
 #endif // RECTANGULOITEM_H
