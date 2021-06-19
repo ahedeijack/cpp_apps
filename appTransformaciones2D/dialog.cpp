@@ -1,5 +1,6 @@
 #include "dialog.h"
 #include "ui_dialog.h"
+#include <QTimer>
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -7,6 +8,12 @@ Dialog::Dialog(QWidget *parent)
 {
     ui->setupUi(this);
     asignarFigura();
+
+    timer1 = new QTimer();
+    connect(timer1, SIGNAL(timeout()), this, SLOT(rotarAnimacion1()));
+
+    timer2 = new QTimer();
+    connect(timer2, SIGNAL(timeout()), this, SLOT(rotarAnimacion2()));
 }
 
 Dialog::~Dialog()
@@ -176,4 +183,42 @@ void Dialog::on_pushButton_2_clicked()
     }
     tx = ty = 0;
     update();
+}
+
+void Dialog::on_pushButton_3_clicked()
+{
+    timer1->start(50);
+}
+
+void Dialog::rotarAnimacion1()
+{
+    static int angulo = 0;
+    static int cont = 0;
+
+    if(cont <= 8){
+        //Empieza en 45 grados
+        angulo = 45;
+
+        if(cont == 8){
+            angulo = 0;
+            cont = 0;
+        }
+
+        //Usar el valor de los Spinner
+        double pfx = 20;
+        double pfy = 30;
+
+        rotarPuntoFijo(angulo, pfx, pfy);+
+        cont++;
+    }
+}
+
+void Dialog::rotarAnimacion2()
+{
+
+}
+
+void Dialog::on_pushButton_4_clicked()
+{
+
 }

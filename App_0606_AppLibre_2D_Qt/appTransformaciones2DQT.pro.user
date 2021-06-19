@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.1, 2021-06-06T21:31:50. -->
+<!-- Written by QtCreator 4.13.1, 2021-06-13T00:42:53. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -325,8 +325,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/MEGAsync/git/C++/appTransformaciones2DQT/appTransformaciones2DQT.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/MEGAsync/git/C++/appTransformaciones2DQT/appTransformaciones2DQT.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">appTransformaciones2DQT2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/MEGAsync/git/C++/App_0606_AppLibre_2D_Qt/appTransformaciones2DQT.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/MEGAsync/git/C++/App_0606_AppLibre_2D_Qt/appTransformaciones2DQT.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

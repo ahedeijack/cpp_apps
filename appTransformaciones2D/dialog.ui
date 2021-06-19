@@ -123,7 +123,7 @@ font: 8pt &quot;Tw Cen MT&quot;;</string>
      <string>Reiniciar</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -165,7 +165,7 @@ font: 8pt &quot;Tw Cen MT&quot;;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -236,6 +236,32 @@ font: 8pt &quot;Tw Cen MT&quot;;</string>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Animacion 1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Animacion 2</string>
+    </property>
    </widget>
   </widget>
  </widget>

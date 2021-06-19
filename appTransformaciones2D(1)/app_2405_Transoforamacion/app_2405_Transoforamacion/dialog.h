@@ -7,6 +7,8 @@
 #include "mapeo.h"
 #include "matrix.h"
 
+#include <QTimer>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class Dialog; }
 QT_END_NAMESPACE
@@ -49,6 +51,14 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_dial_angulo_sliderMoved(int position);
+
+    void rotarAnimacion1();
+
+    void rotarAnimacion2();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::Dialog *ui;
@@ -124,5 +134,7 @@ private:
     bool dibujoMapeado; //H hacía arriba
     //TRASLACION
     int tx, ty;
+    QTimer *timer1, *timer2;
+
 };
 #endif // DIALOG_H

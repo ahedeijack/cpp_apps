@@ -1,12 +1,19 @@
 #include "dialog.h"
 #include "ui_dialog.h"
 //App Felix
+#include <QTimer>
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
     asignarFigura();
+    timer1 = new QTimer();
+    connect(timer1, SIGNAL(timeout()), this, SLOT(rotarAnimacion1()));
+
+    timer2 = new QTimer();
+    connect(timer2, SIGNAL(timeout()), this, SLOT(rotarAnimacion2()));
+
 }
 
 Dialog::~Dialog()
@@ -770,7 +777,11 @@ void Dialog::on_btnAbajo_clicked()
 
 // Reiniciar
 void Dialog::on_pushButton_clicked()
-{ // Asignamos los puntos guardados en figaux a la fig que está manipulando
+{
+    timer1->stop();
+    timer2->stop();
+
+    // Asignamos los puntos guardados en figaux a la fig que está manipulando
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 3; j++){
                 Fig[i][j] = FigAux[i][j];
@@ -826,3 +837,68 @@ void Dialog::on_dial_angulo_sliderMoved(int position)
 {
     rotar(this->ui->dial_angulo->value());
 }
+
+void Dialog::on_pushButton_4_clicked()
+{
+    timer1->start();
+    timer2->stop();
+}
+
+void Dialog::on_pushButton_5_clicked()
+{
+    timer1->stop();
+    timer2->start();
+}
+void Dialog::rotarAnimacion1(){
+    static int angulo = 0;
+    static int cont = 0;
+
+    if(cont <= 8){
+        //Empieza en 45 grados
+        angulo = 45;
+
+        if(cont == 8){
+            angulo = 0;
+            cont = 0;
+        }
+
+        //Usar el valor de los Spinner
+        double pfx = 20;
+        double pfy = 30;
+
+        rotar(angulo);+
+        cont++;
+    }
+}
+void Dialog::rotarAnimacion2(){
+    static bool dir = true;
+    static int angulo = 0;
+    static int cont =0;
+
+    if(cont <= 9 && dir == true){
+        angulo = 45;
+        double pfx = 0;
+        double pfy = 0;
+        rotar(angulo);
+        cont ++;
+        if(cont == 9){
+            angulo = 0;
+            cont = 0;
+            dir = false;
+        }
+    }
+    if(!dir){
+        angulo = -45;
+        double pfx = 10;
+        double pfy = 10;
+        rotar(angulo);
+        cont++;
+        if(cont == 9){
+            angulo = 0;
+            cont = 0;
+            dir = true;
+        }
+    }
+}
+
+

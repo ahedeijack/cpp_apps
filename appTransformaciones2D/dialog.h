@@ -43,6 +43,13 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void rotarAnimacion1();
+
+    void rotarAnimacion2();
+    void on_pushButton_4_clicked();
+
 private:
     Ui::Dialog *ui;
 
@@ -56,5 +63,6 @@ private:
 
     //TRASLACION
     int tx, ty;
+    QTimer *timer1, *timer2;
 };
 #endif // DIALOG_H

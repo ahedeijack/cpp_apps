@@ -23,104 +23,37 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(85, 255, 255);</string>
+    <string notr="true">background-color: rgb(85, 170, 255);</string>
    </property>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>50</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Traslacion</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>TX:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSpinBox" name="spinBox">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(162, 162, 162);</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>TY:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSpinBox" name="spinBox_2">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(162, 162, 162);</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>20</y>
-      <width>239</width>
+      <y>10</y>
+      <width>181</width>
       <height>111</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="1">
-      <widget class="QPushButton" name="btnArriba">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(162, 162, 162);</string>
-       </property>
-       <property name="text">
-        <string>^</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="btnIzq">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(162, 162, 162);</string>
-       </property>
-       <property name="text">
-        <string>&lt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Reiniciar</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="btnDer">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(162, 162, 162);</string>
-       </property>
-       <property name="text">
-        <string>&gt;</string>
-       </property>
-      </widget>
-     </item>
      <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>Detener</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
       <widget class="QPushButton" name="btnAbajo">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(162, 162, 162);</string>
        </property>
@@ -129,20 +62,89 @@
        </property>
       </widget>
      </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="btnIzq">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(162, 162, 162);</string>
+       </property>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="btnDer">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(162, 162, 162);</string>
+       </property>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btnArriba">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(162, 162, 162);</string>
+       </property>
+       <property name="text">
+        <string>^</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>Mover la nave.</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>130</y>
       <width>77</width>
-      <height>130</height>
+      <height>134</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="text">
         <string>Escalación</string>
        </property>
@@ -150,6 +152,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="text">
         <string>SX</string>
        </property>
@@ -157,6 +164,11 @@
      </item>
      <item>
       <widget class="QDoubleSpinBox" name="doubleSpinBox">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="minimum">
         <double>1.000000000000000</double>
        </property>
@@ -164,6 +176,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="text">
         <string>SY</string>
        </property>
@@ -171,6 +188,11 @@
      </item>
      <item>
       <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="minimum">
         <double>1.000000000000000</double>
        </property>
@@ -178,6 +200,11 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="text">
         <string>Escalar</string>
        </property>
@@ -185,18 +212,35 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>87</x>
       <y>130</y>
-      <width>28</width>
-      <height>105</height>
+      <width>31</width>
+      <height>131</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
+      <widget class="QLabel" name="label_8">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QSlider" name="verticalSlider">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="minimum">
         <number>1</number>
        </property>
@@ -209,7 +253,24 @@
       </widget>
      </item>
      <item>
+      <widget class="QLabel" name="label_9">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label_7">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+        </font>
+       </property>
        <property name="text">
         <string>Zoom</string>
        </property>
@@ -217,6 +278,24 @@
      </item>
     </layout>
    </widget>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>369</x>
+     <y>470</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Constantia</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Encender la nave.</string>
+   </property>
   </widget>
  </widget>
  <resources/>

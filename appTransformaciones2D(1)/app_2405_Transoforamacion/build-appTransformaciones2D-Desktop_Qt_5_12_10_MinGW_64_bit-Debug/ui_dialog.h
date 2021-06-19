@@ -11,14 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QDial>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
-#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -29,28 +28,15 @@ class Ui_Dialog
 public:
     QWidget *widget;
     QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout;
-    QLabel *label;
-    QLabel *label_2;
-    QSpinBox *spinBox;
-    QLabel *label_3;
-    QSpinBox *spinBox_2;
-    QWidget *layoutWidget_2;
-    QVBoxLayout *verticalLayout_4;
-    QLabel *label_10;
-    QLabel *label_11;
-    QDoubleSpinBox *doubleSpinBox_pfx;
-    QLabel *label_12;
-    QDoubleSpinBox *doubleSpinBox_pfy;
-    QPushButton *pushButton_3;
-    QWidget *widget1;
     QGridLayout *gridLayout;
-    QPushButton *btnArriba;
-    QPushButton *btnIzq;
     QPushButton *pushButton;
-    QPushButton *btnDer;
     QPushButton *btnAbajo;
-    QWidget *widget2;
+    QLabel *label;
+    QPushButton *btnIzq;
+    QPushButton *btnDer;
+    QPushButton *btnArriba;
+    QLabel *label_2;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_6;
     QLabel *label_4;
@@ -58,16 +44,13 @@ public:
     QLabel *label_5;
     QDoubleSpinBox *doubleSpinBox_2;
     QPushButton *pushButton_2;
-    QWidget *widget3;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_3;
     QLabel *label_8;
     QSlider *verticalSlider;
     QLabel *label_9;
     QLabel *label_7;
-    QWidget *widget4;
-    QVBoxLayout *verticalLayout_5;
-    QLabel *label_13;
-    QDial *dial_angulo;
+    QCheckBox *checkBox;
 
     void setupUi(QDialog *Dialog)
     {
@@ -77,198 +60,141 @@ public:
         widget = new QWidget(Dialog);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(500, 0, 200, 500));
-        widget->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 255, 255);"));
+        widget->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 170, 255);"));
         layoutWidget = new QWidget(widget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 20, 50, 111));
-        verticalLayout = new QVBoxLayout(layoutWidget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        layoutWidget->setGeometry(QRect(10, 10, 181, 111));
+        gridLayout = new QGridLayout(layoutWidget);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QPushButton(layoutWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Constantia"));
+        pushButton->setFont(font);
+
+        gridLayout->addWidget(pushButton, 2, 1, 1, 1);
+
+        btnAbajo = new QPushButton(layoutWidget);
+        btnAbajo->setObjectName(QString::fromUtf8("btnAbajo"));
+        btnAbajo->setFont(font);
+        btnAbajo->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
+
+        gridLayout->addWidget(btnAbajo, 3, 1, 1, 1);
+
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
 
-        verticalLayout->addWidget(label);
+        gridLayout->addWidget(label, 1, 0, 1, 1);
+
+        btnIzq = new QPushButton(layoutWidget);
+        btnIzq->setObjectName(QString::fromUtf8("btnIzq"));
+        btnIzq->setFont(font);
+        btnIzq->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
+
+        gridLayout->addWidget(btnIzq, 2, 0, 1, 1);
+
+        btnDer = new QPushButton(layoutWidget);
+        btnDer->setObjectName(QString::fromUtf8("btnDer"));
+        btnDer->setFont(font);
+        btnDer->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
+
+        gridLayout->addWidget(btnDer, 2, 2, 1, 1);
+
+        btnArriba = new QPushButton(layoutWidget);
+        btnArriba->setObjectName(QString::fromUtf8("btnArriba"));
+        btnArriba->setFont(font);
+        btnArriba->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
+
+        gridLayout->addWidget(btnArriba, 1, 1, 1, 1);
 
         label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
-        verticalLayout->addWidget(label_2);
+        gridLayout->addWidget(label_2, 0, 0, 1, 3);
 
-        spinBox = new QSpinBox(layoutWidget);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
-
-        verticalLayout->addWidget(spinBox);
-
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-
-        verticalLayout->addWidget(label_3);
-
-        spinBox_2 = new QSpinBox(layoutWidget);
-        spinBox_2->setObjectName(QString::fromUtf8("spinBox_2"));
-        spinBox_2->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
-
-        verticalLayout->addWidget(spinBox_2);
-
-        layoutWidget_2 = new QWidget(widget);
-        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(90, 130, 102, 130));
-        verticalLayout_4 = new QVBoxLayout(layoutWidget_2);
-        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        label_10 = new QLabel(layoutWidget_2);
-        label_10->setObjectName(QString::fromUtf8("label_10"));
-
-        verticalLayout_4->addWidget(label_10);
-
-        label_11 = new QLabel(layoutWidget_2);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-
-        verticalLayout_4->addWidget(label_11);
-
-        doubleSpinBox_pfx = new QDoubleSpinBox(layoutWidget_2);
-        doubleSpinBox_pfx->setObjectName(QString::fromUtf8("doubleSpinBox_pfx"));
-        doubleSpinBox_pfx->setMinimum(1.000000000000000);
-
-        verticalLayout_4->addWidget(doubleSpinBox_pfx);
-
-        label_12 = new QLabel(layoutWidget_2);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-
-        verticalLayout_4->addWidget(label_12);
-
-        doubleSpinBox_pfy = new QDoubleSpinBox(layoutWidget_2);
-        doubleSpinBox_pfy->setObjectName(QString::fromUtf8("doubleSpinBox_pfy"));
-        doubleSpinBox_pfy->setMinimum(1.000000000000000);
-
-        verticalLayout_4->addWidget(doubleSpinBox_pfy);
-
-        pushButton_3 = new QPushButton(layoutWidget_2);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-
-        verticalLayout_4->addWidget(pushButton_3);
-
-        widget1 = new QWidget(widget);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(60, 20, 131, 111));
-        gridLayout = new QGridLayout(widget1);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        btnArriba = new QPushButton(widget1);
-        btnArriba->setObjectName(QString::fromUtf8("btnArriba"));
-        btnArriba->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
-
-        gridLayout->addWidget(btnArriba, 0, 1, 1, 1);
-
-        btnIzq = new QPushButton(widget1);
-        btnIzq->setObjectName(QString::fromUtf8("btnIzq"));
-        btnIzq->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
-
-        gridLayout->addWidget(btnIzq, 1, 0, 1, 1);
-
-        pushButton = new QPushButton(widget1);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        gridLayout->addWidget(pushButton, 1, 1, 1, 1);
-
-        btnDer = new QPushButton(widget1);
-        btnDer->setObjectName(QString::fromUtf8("btnDer"));
-        btnDer->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
-
-        gridLayout->addWidget(btnDer, 1, 2, 1, 1);
-
-        btnAbajo = new QPushButton(widget1);
-        btnAbajo->setObjectName(QString::fromUtf8("btnAbajo"));
-        btnAbajo->setStyleSheet(QString::fromUtf8("background-color: rgb(162, 162, 162);"));
-
-        gridLayout->addWidget(btnAbajo, 2, 1, 1, 1);
-
-        widget2 = new QWidget(widget);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        widget2->setGeometry(QRect(10, 130, 77, 130));
-        verticalLayout_2 = new QVBoxLayout(widget2);
+        layoutWidget1 = new QWidget(widget);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(10, 130, 77, 134));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_6 = new QLabel(widget2);
+        label_6 = new QLabel(layoutWidget1);
         label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setFont(font);
 
         verticalLayout_2->addWidget(label_6);
 
-        label_4 = new QLabel(widget2);
+        label_4 = new QLabel(layoutWidget1);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         verticalLayout_2->addWidget(label_4);
 
-        doubleSpinBox = new QDoubleSpinBox(widget2);
+        doubleSpinBox = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBox->setObjectName(QString::fromUtf8("doubleSpinBox"));
+        doubleSpinBox->setFont(font);
         doubleSpinBox->setMinimum(1.000000000000000);
 
         verticalLayout_2->addWidget(doubleSpinBox);
 
-        label_5 = new QLabel(widget2);
+        label_5 = new QLabel(layoutWidget1);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font);
 
         verticalLayout_2->addWidget(label_5);
 
-        doubleSpinBox_2 = new QDoubleSpinBox(widget2);
+        doubleSpinBox_2 = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBox_2->setObjectName(QString::fromUtf8("doubleSpinBox_2"));
+        doubleSpinBox_2->setFont(font);
         doubleSpinBox_2->setMinimum(1.000000000000000);
 
         verticalLayout_2->addWidget(doubleSpinBox_2);
 
-        pushButton_2 = new QPushButton(widget2);
+        pushButton_2 = new QPushButton(layoutWidget1);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setFont(font);
 
         verticalLayout_2->addWidget(pushButton_2);
 
-        widget3 = new QWidget(widget);
-        widget3->setObjectName(QString::fromUtf8("widget3"));
-        widget3->setGeometry(QRect(10, 260, 28, 161));
-        verticalLayout_3 = new QVBoxLayout(widget3);
+        layoutWidget2 = new QWidget(widget);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(87, 130, 31, 131));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget2);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_8 = new QLabel(widget3);
+        label_8 = new QLabel(layoutWidget2);
         label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setFont(font);
 
         verticalLayout_3->addWidget(label_8);
 
-        verticalSlider = new QSlider(widget3);
+        verticalSlider = new QSlider(layoutWidget2);
         verticalSlider->setObjectName(QString::fromUtf8("verticalSlider"));
+        verticalSlider->setFont(font);
         verticalSlider->setMinimum(1);
         verticalSlider->setSingleStep(3);
         verticalSlider->setOrientation(Qt::Vertical);
 
         verticalLayout_3->addWidget(verticalSlider);
 
-        label_9 = new QLabel(widget3);
+        label_9 = new QLabel(layoutWidget2);
         label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setFont(font);
 
         verticalLayout_3->addWidget(label_9);
 
-        label_7 = new QLabel(widget3);
+        label_7 = new QLabel(layoutWidget2);
         label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setFont(font);
 
         verticalLayout_3->addWidget(label_7);
 
-        widget4 = new QWidget(widget);
-        widget4->setObjectName(QString::fromUtf8("widget4"));
-        widget4->setGeometry(QRect(110, 260, 81, 101));
-        verticalLayout_5 = new QVBoxLayout(widget4);
-        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_13 = new QLabel(widget4);
-        label_13->setObjectName(QString::fromUtf8("label_13"));
-
-        verticalLayout_5->addWidget(label_13);
-
-        dial_angulo = new QDial(widget4);
-        dial_angulo->setObjectName(QString::fromUtf8("dial_angulo"));
-        dial_angulo->setMaximum(360);
-        dial_angulo->setSingleStep(5);
-
-        verticalLayout_5->addWidget(dial_angulo);
-
+        checkBox = new QCheckBox(Dialog);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(369, 470, 111, 20));
+        checkBox->setFont(font);
 
         retranslateUi(Dialog);
 
@@ -278,18 +204,13 @@ public:
     void retranslateUi(QDialog *Dialog)
     {
         Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", nullptr));
-        label->setText(QApplication::translate("Dialog", "Mover", nullptr));
-        label_2->setText(QApplication::translate("Dialog", "TX:", nullptr));
-        label_3->setText(QApplication::translate("Dialog", "TY:", nullptr));
-        label_10->setText(QApplication::translate("Dialog", "Escalaci\303\263n Punto Fijo", nullptr));
-        label_11->setText(QApplication::translate("Dialog", "Punto Fijo X", nullptr));
-        label_12->setText(QApplication::translate("Dialog", "Punto Fijo Y", nullptr));
-        pushButton_3->setText(QApplication::translate("Dialog", "Escalar", nullptr));
-        btnArriba->setText(QApplication::translate("Dialog", "^", nullptr));
-        btnIzq->setText(QApplication::translate("Dialog", "<", nullptr));
-        pushButton->setText(QApplication::translate("Dialog", "Reiniciar", nullptr));
-        btnDer->setText(QApplication::translate("Dialog", ">", nullptr));
+        pushButton->setText(QApplication::translate("Dialog", "Detener", nullptr));
         btnAbajo->setText(QApplication::translate("Dialog", "v", nullptr));
+        label->setText(QString());
+        btnIzq->setText(QApplication::translate("Dialog", "<", nullptr));
+        btnDer->setText(QApplication::translate("Dialog", ">", nullptr));
+        btnArriba->setText(QApplication::translate("Dialog", "^", nullptr));
+        label_2->setText(QApplication::translate("Dialog", "Mover la nave.", nullptr));
         label_6->setText(QApplication::translate("Dialog", "Escalaci\303\263n", nullptr));
         label_4->setText(QApplication::translate("Dialog", "SX", nullptr));
         label_5->setText(QApplication::translate("Dialog", "SY", nullptr));
@@ -297,7 +218,7 @@ public:
         label_8->setText(QApplication::translate("Dialog", "+", nullptr));
         label_9->setText(QApplication::translate("Dialog", "-", nullptr));
         label_7->setText(QApplication::translate("Dialog", "Zoom", nullptr));
-        label_13->setText(QApplication::translate("Dialog", "Girar", nullptr));
+        checkBox->setText(QApplication::translate("Dialog", "Encender la nave.", nullptr));
     } // retranslateUi
 
 };
