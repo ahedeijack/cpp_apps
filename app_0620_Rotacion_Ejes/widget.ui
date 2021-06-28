@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>797</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>3D</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>579</x>
+     <y>0</y>
+     <width>221</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>201</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ALPHA</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLCDNumber" name="lcdAlpha">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QDial" name="dialAplha">
+       <property name="maximum">
+        <number>360</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDial" name="dialPhi">
+       <property name="maximum">
+        <number>360</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>PHI</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLCDNumber" name="lcdPhi"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>201</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButtonArriba">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>↑</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButtonIzquierda">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>←</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButtonAbajo">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>↓</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButtonDerecha">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>→</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButtonZMenos">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Z-</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButtonZMas">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Z+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Traslacion</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>201</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButtonDerecha_3">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>X +</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButtonZMas_3">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Z+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButtonZMenos_3">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Z-</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButtonIzquierda_3">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>X -</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButtonAbajo_3">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Y -</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButtonArriba_3">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Y +</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Escalacion</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>201</width>
+      <height>117</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Rotacion</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QRadioButton" name="radioButtonZ">
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="radioButtonY">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="radioButtonX">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>570</y>
+     <width>106</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;Impact&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Usar Teclado</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>dialAplha</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdAlpha</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>653</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dialPhi</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdPhi</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>718</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
